@@ -2,7 +2,11 @@
 This is a simple package to increment and release versions to git in a project's `package.json` file based on [Semver](https://semver.org/).
 
 ## Installation
-`npm install --save-dev git+ssh://git@github.com:Launch-Security/incrementor.git`
+NPM:
+`npm install --save-dev incrementor`
+
+Yarn:
+`yarn add incrementor --dev`
 
 ## Usage
 In your project's `package.json` file, add an entry to `scripts`:
@@ -15,6 +19,11 @@ In your project's `package.json` file, add an entry to `scripts`:
 Make changes and commits as you normally would, then:
 ```
 npm run release -- patch "* Big improvements" "* Maximum performance"
+```
+
+Or, for Yarn:
+```
+yarn release patch "* Big improvements" "* Maximum performance"
 ```
 
 That's it! Incrementor will:

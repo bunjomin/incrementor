@@ -4,7 +4,7 @@
   "description": "This is a simple package to increment and release versions to git in a project's `package.json` file based on [Semver](https://semver.org/).",
   "main": "index.js",
   "bin": {
-    "release": "./index.js"
+    "incrementor": "./index.js"
   },
   "scripts": {
     "release": "node index.js"
