@@ -17,9 +17,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Launch-Security/incrementor/issues"
+    "url": "https://github.com/bunjomin/incrementor/issues"
   },
-  "homepage": "https://github.com/Launch-Security/incrementor#readme",
+  "homepage": "https://github.com/bunjomin/incrementor#readme",
   "dependencies": {
     "fs-extra": "8.1.0"
   }
