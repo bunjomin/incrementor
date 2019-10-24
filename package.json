@@ -1,0 +1,27 @@
+{
+  "name": "incrementor",
+  "version": "0.0.17",
+  "description": "This is a simple package to increment and release versions to git in a project's `package.json` file based on [Semver](https://semver.org/).",
+  "main": "index.js",
+  "bin": {
+    "release": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Launch-Security/incrementor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Launch-Security/incrementor/issues"
+  },
+  "homepage": "https://github.com/Launch-Security/incrementor#readme",
+  "dependencies": {
+    "fs-extra": "8.1.0"
+  }
+}
