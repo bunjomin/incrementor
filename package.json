@@ -1,6 +1,6 @@
 {
   "name": "incrementor",
-  "version": "0.1.17",
+  "version": "0.2.0",
   "description": "This is a simple package to increment and release versions to git in a project's `package.json` file based on [Semver](https://semver.org/).",
   "main": "index.js",
   "bin": {
