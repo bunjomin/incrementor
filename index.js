@@ -38,13 +38,27 @@ function increment() {
 
   // Split and increment the version
   result = () => {
-    let [ major, minor, patch ] = package.version.split('.'); // 0.1.2 becomes ['0', '1', '2'];
+    const [ major, minor, patch ] = package.version.split('.'); // 0.1.2 becomes ['0', '1', '2'];
     let v = {
       major,
       minor,
       patch
     };
     v[versionType] = Number(v[versionType]) + 1; // Patch EX: x.x.3 -> x.x.4 || x.x.9 -> x.x.10
+
+    /**
+     * If major or minor, we need to reset the following numbers to 0
+     * 1.2.3 -> 1.3.0 or 1.2.3 -> 2.0.0
+     */
+    const keys = Object.keys(v);
+    let resetNext;
+    if (keys.indexOf(versionType) !== keys.length - 1) resetNext = keys[keys.indexOf(versionType) + 1];
+    while (resetNext) {
+      v[resetNext] = '0';
+      if (keys.indexOf(resetNext) !== keys.length - 1) resetNext = keys[keys.indexOf(resetNext) + 1];
+      else resetNext = null;
+    }
+
     const joined = Object.keys(v).map(segment => v[segment]);
     return joined.join('.');
   };
